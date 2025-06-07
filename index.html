@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple POS System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Business Name Setting -->
+<section>
+  <label for="biz-name"><strong>Business Name:</strong></label>
+  <input type="text" id="biz-name" placeholder="e.g. Khalid Store" />
+  <button onclick="saveBizName()">Save Name</button>
+</section>
+
+<h1 id="display-name">Simple POS System</h1>
+
+
+  <!-- Add Product -->
+  <section>
+    <h2>Add Product</h2>
+    <form id="product-form">
+      <input type="text" id="product-name" placeholder="Name" required />
+      <input type="number" id="product-price" placeholder="Price (₦)" required />
+      <input type="number" id="product-qty" placeholder="Quantity" required />
+      <button type="submit">Add</button>
+    </form>
+  </section>
+
+  <!-- Product List -->
+  <section>
+    <h2>Available Products</h2>
+    <ul id="product-list"></ul>
+  </section>
+
+  <!-- Cart -->
+  <section>
+    <h2>Current Sale</h2>
+    <ul id="sale-list"></ul>
+    <p><strong>Total:</strong> ₦<span id="total">0</span></p>
+    <button id="print-receipt">Print Receipt</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
