@@ -147,3 +147,8 @@ document.getElementById("print-receipt").addEventListener("click", function () {
   localStorage.setItem("cart", JSON.stringify(cart));
   renderSale();
 });
+function logout() {
+  localStorage.removeItem("isLoggedIn");
+  window.location.href = "login.html";
+}
+

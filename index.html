@@ -41,6 +41,13 @@
     <button id="print-receipt">Print Receipt</button>
   </section>
 
+  <script>
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+<button onclick="logout()">Logout</button>
+
   <script src="app.js"></script>
 </body>
 </html>
